@@ -1,0 +1,292 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #BEE2EF, #73C1DE); /* Mixed gradient background */
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.app {
+  text-align: center;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #BEE2EF, #73C1DE) !important; /* Gradient background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3C3CAD; /* Dark purple */
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #3C3CAD;
+}
+
+.navbar {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #3C3CAD;
+  font-size: 16px;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #BEE2EF;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+.action-btn,
+.get-started-btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-btn {
+  background: none;
+  color: #3C3CAD;
+  border: 1px solid #BEE2EF;
+}
+
+.action-btn:hover {
+  background-color: #ffffff;
+  color: #73C1DE;
+}
+
+.get-started-btn {
+  background-color: #BEE2EF;
+  color: #3C3CAD;
+  border: none;
+}
+
+.get-started-btn:hover {
+  background-color: #73C1DE;
+  color: #ffffff;
+}
+
+/* Main Content */
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  gap: 50px;
+}
+
+.text-content {
+  flex: 1;
+  text-align: left;
+}
+
+h1 {
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: #3734A9;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 18px;
+  color: #060303;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.shop-btn {
+  padding: 12px 25px;
+  background-color: #3734A9;
+  color: #FFFCFC;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.shop-btn:hover {
+  background-color: #73C1DE;
+  color: #ffffff;
+  border: 1px solid #73C1DE;
+}
+
+/* Image Content */
+.image-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-images {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.main-image {
+  width: 300px;
+  height: 570px;
+  object-fit: cover;
+  border-radius: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Category Carousel */
+.category-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.category-container {
+  display: flex;
+  gap: 15px; /* Adjusted gap for cleaner look */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 90%;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.category-container::-webkit-scrollbar {
+  display: none;
+}
+
+.category-item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 200px; /* Increased width */
+  overflow: hidden;
+  margin: 5px; /* Reduced white space */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-image {
+  width: 100%; /* Full width */
+  height: auto;
+  object-fit: cover; /* Prevent image distortion */
+  margin: 0; /* No extra margin */
+}
+
+.category-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+/* Hover Effect for Category Image */
+.category-item:hover {
+  transform: scale(1.07); /* Increased scaling */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.category-image:hover {
+  transform: scale(1.12); /* Slight enlargement */
+  transition: transform 0.3s ease;
+}
+
+/* Arrows for Carousel */
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  padding: 10px;
+}
+
+.arrow:hover {
+  color: #555;
+}
+
+.left-arrow {
+  margin-right: 10px;
+}
+
+.right-arrow {
+  margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .image-content {
+    width: 100%;
+  }
+
+  .main-image {
+    width: 200px;
+    height: 300px;
+  }
+
+  .category-container {
+    gap: 10px;
+  }
+
+  .category-item {
+    width: 150px; /* Smaller items for smaller screens */
+  }
+
+  .category-image {
+    height: 150px; /* Adjusted image height */
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+  }
+}
