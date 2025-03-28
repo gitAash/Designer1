@@ -1,0 +1,136 @@
+/* General Styles */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Carousel Container */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Category Container */
+.category-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 90%;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.category-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbars */
+}
+
+/* Category Item */
+.category-item {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 180px; /* Adjust width for consistency */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 10px 10px;
+}
+
+.category-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures images are properly contained without stretching */
+  border-radius: 10px;
+  margin-top: 10px; /* Adds space above the image */
+}
+
+/* Specific size styles for each category */
+.category-item:nth-child(1) .category-image {
+  height: 180px; /* Specific height for the first image */
+}
+
+.category-item:nth-child(2) .category-image {
+  height: 240px; /* Taller image for the second item */
+}
+
+.category-item:nth-child(3) .category-image {
+  height: 300px; /* Tallest image for the third item */
+}
+
+.category-item:nth-child(4) .category-image {
+  height: 240px; /* Same height as the second one */
+}
+
+.category-item:nth-child(5) .category-image {
+  height: 180px; /* Same height as the first one */
+}
+
+/* Category Name */
+.category-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+/* Navigation Arrows */
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  padding: 10px;
+  z-index: 10;
+}
+
+.arrow:hover {
+  color: #555;
+}
+
+.left-arrow {
+  margin-right: 10px;
+}
+
+.right-arrow {
+  margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-container {
+    gap: 10px;
+  }
+
+  .category-item {
+    width: 120px;
+  }
+
+  .category-image {
+    height: 120px; /* Smaller images on mobile */
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+  }
+}
